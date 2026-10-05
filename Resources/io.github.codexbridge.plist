@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key><string>io.github.codexbridge</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Library/Application Support/CodexBridge/codexbridge</string>
+        <string>run</string>
+        <string>/Library/Application Support/CodexBridge/config.json</string>
+    </array>
+    <key>RunAtLoad</key><true/>
+    <key>KeepAlive</key><true/>
+    <key>ThrottleInterval</key><integer>15</integer>
+    <key>ExitTimeOut</key><integer>20</integer>
+    <key>ProcessType</key><string>Background</string>
+    <key>WorkingDirectory</key><string>/Library/Application Support/CodexBridge</string>
+    <key>StandardErrorPath</key><string>/Library/Application Support/CodexBridge/logs/launchd-errors.log</string>
+    <key>Umask</key><integer>63</integer>
+</dict>
+</plist>

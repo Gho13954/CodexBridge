@@ -1,0 +1,13 @@
+name: CI
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+      - run: ./scripts/test.sh
+      - run: swift build -c release
+      - run: for script in scripts/*.sh; do bash -n "$script"; done
+      - run: plutil -lint Resources/io.github.codexbridge.plist
